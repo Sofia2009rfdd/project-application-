@@ -18,7 +18,6 @@ BIK = ''
 Correspondent_account = ''
 
 
-
 def general_info_user(n_parameter, a_parameter, ph_parameter, e_parameter, index_parameter, p_parameter, i_parameter):
     print(SEPARATOR)
     print('Имя:    ', n_parameter)
@@ -46,7 +45,6 @@ print('Приложение MyProfile')
 print('Сохраняй информацию о себе и выводи ее в разных форматах')
 
 while True:
-    # main menu
     print(SEPARATOR)
     print('ГЛАВНОЕ МЕНЮ')
     print('1 - Ввести или обновить информацию')
@@ -58,24 +56,19 @@ while True:
         break
 
     if option == 1:
-        # submenu 1: edit info
-        while True:    #ВВЕСТИ ИЛИ ОБНОВИТЬ ИНФОРМАЦИЮ
+        while True:
             print(SEPARATOR)
             print('ВВЕСТИ ИЛИ ОБНОВИТЬ ИНФОРМАЦИЮ')
-            print('1 - Личная информация') ###
-            print('2 - Информация о предпринимателе') ###
-            print('0 - Назад') ###
+            print('1 - Личная информация')
+            print('2 - Информация о предпринимателе')
+            print('0 - Назад')
 
             option2 = int(input('Введите номер пункта меню: '))
             if option2 == 0:
                 break
-
-
-            if option2 == 1: #Личная информация
-                # input general info
+            if option2 == 1:
                 n = input('Введите имя: ')
                 while 1:
-                    # validate user age
                     a = int(input('Введите возраст: '))
                     if a > 0:
                         break
@@ -88,12 +81,9 @@ while True:
                         ph += ch
 
                 e = input('Введите адрес электронной почты: ')
-                index = input('Введите индекс: ') ####  индекс
-                p = input('Введите почтовый адрес: ') ### почтовый адрес
+                index = input('Введите индекс: ')
+                p = input('Введите почтовый адрес: ')
                 i = input('Введите дополнительную информацию:\n')
-
-
-
             elif option2 == 2:
                 while 1:
                     OGRNIP = input('Введите ОГРНИП: ')
@@ -110,21 +100,15 @@ while True:
                 Bank_name = input('Введите название банка: ')
                 BIK = input('Введите БИК: ')
                 Correspondent_account = input('Введите корреспондентский счёт: ')
-
-
             else:
                 print('Введите корректный пункт меню')
-
-
-
     elif option == 2:
-        # submenu 2: print info
         while True:
             print(SEPARATOR)
             print('ВЫВЕСТИ ИНФОРМАЦИЮ')
-            print('1 - Личная информация') ###
-            print('2 - Вся информация') ###
-            print('0 - Назад') ###
+            print('1 - Личная информация')
+            print('2 - Вся информация')
+            print('0 - Назад')
 
             option2 = int(input('Введите номер пункта меню: '))
             if option2 == 0:
